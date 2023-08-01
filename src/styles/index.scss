@@ -1,0 +1,48 @@
+@import '../constants/constants';
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.wrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: $light-gray-color;
+  overflow: auto;
+
+  &__light-background {
+    background: $lighter-gray-color;
+  }
+
+  .dashboard-section:last-child {
+    flex: 1;
+  }
+}
+
+.avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  font-weight: 600;
+  color: $white-color;
+  background: $light-blue-color;
+  border-radius: 50%;
+
+  &__small {
+    width: 32px;
+    height: 32px;
+  }
+}

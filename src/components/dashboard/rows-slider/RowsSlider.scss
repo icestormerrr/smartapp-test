@@ -1,0 +1,66 @@
+@import '../../../constants/constants';
+
+.rows-slider {
+  .slick-track {
+    display: flex;
+    gap: 16px;
+  }
+
+  .slick-slide {
+    filter: drop-shadow(0px 1px 8px $gray-color);
+    border-radius: 8px;
+    background: $white-color;
+  }
+
+  .slick-arrow {
+    display: none !important;
+    border-radius: 4px;
+    border: 1px solid $bright-gray-color;
+    background: $white-color;
+    box-shadow: 0 0 20px 0 $gray-color;
+    padding: 4px;
+    z-index: 1000;
+  }
+
+  .slick-prev {
+    left: 16px;
+  }
+
+  .slick-next {
+    right: 12px;
+  }
+
+  &__item {
+    display: flex !important;
+    gap: 16px;
+    margin: 13.5px;
+    cursor: pointer;
+
+    &--info {
+      width: calc(100% - 80px);
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      border-bottom: 0.5px solid $dark-gray-color;
+      padding-bottom: 8px;
+    }
+
+    &--name {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+
+    img {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+    }
+  }
+
+  &:hover {
+    .slick-arrow {
+      display: block !important;
+    }
+  }
+}

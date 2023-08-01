@@ -1,0 +1,45 @@
+@import '../../../constants/constants';
+
+.drag-drop-results-list {
+  background: $white-color;
+  border-radius: 8px;
+  box-shadow: 0 1px 8px 0 $gray-color;
+  padding: 8px 16px 8px 16px;
+  margin: 0 16px;
+
+  &__item {
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0 16px 0;
+
+    div:first-child {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    svg {
+      width: 32px;
+      height: 32px;
+    }
+
+    svg:first-child {
+      width: 24px;
+      height: 24px;
+    }
+
+    svg:last-child {
+      width: 24px;
+      height: 24px;
+      cursor: pointer;
+    }
+
+    img {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+    }
+  }
+}

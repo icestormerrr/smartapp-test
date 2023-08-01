@@ -1,0 +1,14 @@
+.simple-slider {
+  &__item {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+
+    img {
+      width: 80px;
+      height: 80px;
+      border-radius: 23px;
+    }
+  }
+}

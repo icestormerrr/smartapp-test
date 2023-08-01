@@ -1,0 +1,26 @@
+@import '../../constants/constants';
+
+.empty-dashboard {
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+
+  &__text {
+    font-size: 14px;
+    font-weight: 400;
+    color: $light-black-color;
+  }
+
+  &__link {
+    font-size: 16px;
+    font-weight: 700;
+    color: $white-color;
+    background: $blue-color;
+    border-radius: 12px;
+    padding: 12px 32px 12px 32px;
+    text-decoration: none;
+  }
+}

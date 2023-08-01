@@ -1,0 +1,19 @@
+@import '../../../constants/constants';
+
+.settings-section {
+  &__title {
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+
+    div:first-child {
+      font-weight: 600;
+    }
+
+    div:last-child {
+      font-weight: 400;
+      color: $darker-gray-color;
+    }
+  }
+}
