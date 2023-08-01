@@ -4,86 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7b8674d4-5834-4f98-8804-baad483f5dd5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.eslintrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.npmrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.prettierrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/logo192.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/logo512.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/robots.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/add.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/back.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/clear.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/corporate.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/delete.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/drag.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/nextArrow.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/plus.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/prevArrow.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/remove.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/search.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/service.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/settings.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/App.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/add-to-dashboard/AddToDashboard.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/add-to-dashboard/AddToDashboard.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/add-to-dashboard/results-list/ResultsList.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/add-to-dashboard/results-list/ResultsList.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/add-to-dashboard/section/Section.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/add-to-dashboard/section/Section.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/dashboard/Dashboard.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/dashboard/Dashboard.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/dashboard/rows-slider/RowsSlider.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/dashboard/rows-slider/RowsSlider.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/dashboard/section/Section.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/dashboard/section/Section.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/dashboard/simple-slider/SimpleSlider.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/dashboard/simple-slider/SimpleSlider.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/empty-dashboard/EmptyDashboard.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/empty-dashboard/EmptyDashboard.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/header/Header.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/header/Header.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/main-loader/MainLoader.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/main-loader/MainLoader.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/no-results-found/NoResultsFound.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/no-results-found/NoResultsFound.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/notification/Notification.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/notification/Notification.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/settings/Settings.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/settings/Settings.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/settings/results-list/ResultsList.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/settings/results-list/ResultsList.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/settings/section/Section.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/settings/section/Section.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/constants/constants.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/constants/constants.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/helpers/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/mockups.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/react-app-env.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/actions/dashboard.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/actions/ui.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/configureStore.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/reducers/dashboard.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/reducers/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/reducers/ui.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/router.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/sagas/dashboard.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/sagas/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/selectors/dashboard.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/selectors/ui.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/index.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/reducers.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/sagas.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-    </list>
+    <list default="true" id="7b8674d4-5834-4f98-8804-baad483f5dd5" name="Changes" comment="feat: project;" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -133,8 +54,17 @@
       <updated>1690877206818</updated>
       <workItem from="1690877208065" duration="811000" />
       <workItem from="1690878251145" duration="42000" />
-      <workItem from="1690878304714" duration="214000" />
+      <workItem from="1690878304714" duration="530000" />
     </task>
+    <task id="LOCAL-00001" summary="feat: project;">
+      <option name="closed" value="true" />
+      <created>1690878568127</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1690878568127</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -150,5 +80,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat: project;" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: project;" />
   </component>
 </project>
