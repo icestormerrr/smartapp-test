@@ -25,6 +25,7 @@ import {
 import { setMainLoader, setNotification } from '../actions/ui';
 import { getDashboardItems } from '../selectors/dashboard';
 import { METHODS, NOTIFICATION_TYPES, SECTION_TYPE, STATUS_OK, STATUS_SUCCESS } from '../../constants/constants';
+import { MOCKUP_CHATS, MOCKUP_CONTACTS, MOCKUP_SERVICES } from '../../mockups';
 import { ChatState, ContactState, ServiceState } from '../../types/reducers';
 import { getNextOrderValue } from '../../helpers';
 
@@ -50,11 +51,13 @@ export function* fetchDashboardItemsSaga(): GeneratorFunction {
     });
 
     if (response?.payload?.status === STATUS_OK) {
-      yield put(setDashboardItems({
-        services: response?.payload?.result?.services || [],
-        chats: response?.payload?.result?.chats || [],
-        contacts: response?.payload?.result?.contacts || [],
-      }));
+      yield put(
+        setDashboardItems({
+          services: MOCKUP_SERVICES, //response?.payload?.result?.services || [],
+          chats: MOCKUP_CHATS, //response?.payload?.result?.chats || [],
+          contacts: MOCKUP_CONTACTS, //response?.payload?.result?.contacts || [],
+        })
+      );
     }
   } catch (e) {
     console.error('fetchDashboardItemsSaga error: ', e);
@@ -71,13 +74,17 @@ export function* searchForNewDashboardItemsSaga({ payload: querySearch }: search
       method: METHODS.getServices,
       params: { query_search: querySearch },
     });
-    const services = [...(servicesResponse?.payload?.result?.services || [])];
+
+    // const services = [...(servicesResponse?.payload?.result?.services || [])];
+    const services = MOCKUP_SERVICES.filter((service) => service.name.toLowerCase().includes(querySearch.toLowerCase()));
 
     const chatsResponse = yield getChats({ filter: querySearch });
-    const chats = [...(chatsResponse?.payload?.chats || [])];
+    // const chats = [...(chatsResponse?.payload?.chats || [])];
+    const chats = MOCKUP_CHATS.filter((chat) => chat.name.toLowerCase().includes(querySearch.toLowerCase()));
 
     const contactsResponse = yield searchCorporatePhonebook({ filter: querySearch });
-    const contacts = [...(contactsResponse?.payload?.corpPhonebookEntries || []), ...(contactsResponse?.payload?.trustSearchEntries || [])];
+    // const contacts[...(contactsResponse?.payload?.corpPhonebookEntries || []), ...(contactsResponse?.payload?.trustSearchEntries || [])];
+    const contacts = MOCKUP_CONTACTS.filter((contact) => contact.name.toLowerCase().includes(querySearch.toLowerCase()));
 
     yield put(setFoundItemsForDashboard({ services, chats, contacts }));
   } catch (e) {
@@ -104,11 +111,12 @@ export function* addItemToDashboardSaga({ payload }: addItemToDashboardActionTyp
       return;
     }
 
-    const orderValue: number = payload.entityType === SECTION_TYPE.services
-      ? getNextOrderValue(services)
-      : payload.entityType === SECTION_TYPE.chats
-        ? getNextOrderValue(chats)
-        : getNextOrderValue(contacts);
+    const orderValue: number =
+      payload.entityType === SECTION_TYPE.services
+        ? getNextOrderValue(services)
+        : payload.entityType === SECTION_TYPE.chats
+          ? getNextOrderValue(chats)
+          : getNextOrderValue(contacts);
 
     const response = yield bridge?.sendBotEvent({
       method: METHODS.postDashboard,
@@ -118,7 +126,8 @@ export function* addItemToDashboardSaga({ payload }: addItemToDashboardActionTyp
       },
     });
 
-    if (response?.payload?.result === STATUS_SUCCESS) {
+    // if (response?.payload?.result === STATUS_SUCCESS) {
+    if (true) {
       yield put(updateItemsOnDashboard({ entity: { ...payload.entity, orderValue }, entityType: payload.entityType }));
     }
   } catch (e) {
@@ -150,7 +159,8 @@ export function* removeItemFromDashboardSaga({ payload }: removeItemFromDashboar
       },
     });
 
-    if (response?.payload?.result === STATUS_SUCCESS) {
+    // if (response?.payload?.result === STATUS_SUCCESS) {
+    if (true) {
       yield put(setDashboardItems({ services, chats, contacts }));
     }
   } catch (e) {
@@ -195,7 +205,8 @@ export function* changeDashboardItemsOrderSaga({ payload }: changeDashboardItems
       },
     });
 
-    if (response?.payload?.result === STATUS_SUCCESS) {
+    //if (response?.payload?.result === STATUS_SUCCESS) {
+    if (true) {
       yield put(setDashboardItems({ services, chats, contacts }));
     }
   } catch (e) {

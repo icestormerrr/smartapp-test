@@ -60,3 +60,10 @@ export const reorderItems = (items: any[], startIndex: number, endIndex: number)
 
   return result;
 };
+
+export const formatDate = (date: Date | number) => {
+  const dateObject = new Date(date);
+  const hours = ('0' + dateObject.getHours()).slice(-2);
+  const minutes = ('0' + dateObject.getMinutes()).slice(-2);
+  return hours + ':' + minutes;
+};

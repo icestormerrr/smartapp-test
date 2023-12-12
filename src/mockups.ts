@@ -5,7 +5,7 @@ export const MOCKUP_SERVICES: ServiceState[] = [
     smartappHuid: '078b44c7-afe9-44e8-8ee5-4fd6452dbac4',
     appId: 'сервис1',
     name: 'Сервис 1',
-    avatar: 'https://cts1dev.ccsteam.ru/uploads/profile_avatar/0833887b-2083-59e5-8d45-974c89131d13/90a4139730d8411f9547eaa17edc7b4c.png?v=1618478844359',
+    avatar: null,
     orderValue: 1,
   },
   {
@@ -90,7 +90,7 @@ export const MOCKUP_CHATS: ChatState[] = [
     name: 'Чат 4',
     avatar: null,
     orderValue: 4,
-  }
+  },
 ];
 
 export const MOCKUP_CONTACTS: ContactState[] = [
@@ -149,5 +149,125 @@ export const MOCKUP_CONTACTS: ContactState[] = [
     companyPosition: 'Разработчик',
     contacts: [{ userHuid: '6fssaffdas2c-6505-57a5-a088-25ea5d1d0364' }],
     orderValue: 7,
-  }
+  },
 ];
+
+export const MOCKUP_CONTACTS_FULL_INFO = [
+  {
+    name: 'Светлова Ирина',
+    avatar: null,
+    company: 'Express, Unlimited Production',
+    companyPosition: 'Дизайнер',
+    lastMessage: 'gyjyjtyjtyejtyj',
+    id: '6fafda2c-6505-57a5-a088-25ea5d1d0364',
+    time: 1600000010000,
+    unreadMsgCount: 0,
+  },
+  {
+    name: 'Денисова Наталья',
+    avatar: null,
+    company: 'Express, Unlimited Production',
+    companyPosition: 'Руководитель подразделения',
+    lastMessage: 'hgjfffrs',
+    id: '6fafda2c-6505-57a5-a088-25ea5d1d03364',
+    time: 1000500020000,
+    unreadMsgCount: 0,
+  },
+  {
+    name: 'Смирнова Екатерина',
+    avatar: null,
+    company: 'Express, Unlimited Production',
+    companyPosition: 'Руководитель подразделения',
+    lastMessage: 'fghjjjjjjjjjjj',
+    id: '6faafda2c-6505-57a5-a088-25ea5d1d03364',
+    time: 3000000030000,
+    unreadMsgCount: 6,
+  },
+  {
+    name: 'Авраменко Яна',
+    avatar: null,
+    company: 'Express, Unlimited Production',
+    companyPosition: 'Разработчик',
+    lastMessage: 'fghjjjjjjjjj',
+    id: '6fafdas2c-6505-57a5-a088-25ea5d1d0364',
+    time: 1000600040000,
+    unreadMsgCount: 0,
+  },
+  {
+    name: 'Авраменко Дарья',
+    avatar: null,
+    company: 'Express, Unlimited Production',
+    companyPosition: 'Разработчик',
+    lastMessage: 'ghjgjjjjjjj',
+    id: '6faffdas2c-6505-57a5-a088-25ea5d1d0364',
+    time: 1050000050000,
+    unreadMsgCount: 1,
+  },
+  {
+    name: 'Есина Екатерина',
+    avatar: null,
+    company: 'Express, Unlimited Production',
+    companyPosition: 'Разработчик',
+    lastMessage: 'ghjghjfghj',
+    id: '6fsaffdas2c-6505-57a5-a088-25ea5d1d0364',
+    time: 1000050060000,
+    unreadMsgCount: 2,
+  },
+  {
+    name: 'Хузин Вильдан',
+    avatar: null,
+    company: 'Express, Unlimited Production',
+    companyPosition: 'Разработчик',
+    lastMessage: '3454534534',
+    id: '6fssaffdas2c-6505-57a5-a088-25ea5d1d0364',
+    time: 1200000070000,
+    unreadMsgCount: 3,
+  },
+];
+
+export const MOCKUP_CHATS_FULL_INFO = [
+  {
+    id: '740cf331-d833-5250-b5a5-5b5cbc697ff5',
+    name: 'Чат 1',
+    avatar: null,
+    time: 1000030070000,
+    unreadMsgCount: 3,
+    lastMessage: '3454534534',
+  },
+  {
+    id: '740cf331-d8334-5250-b5a5-5b5cbc697ff5',
+    name: 'Чат 2',
+    avatar: null,
+    time: 1007000050000,
+    unreadMsgCount: 1,
+    lastMessage: 'ghjghjfghj',
+  },
+  {
+    id: '740cf331-d83342-5250-b5a5-5b5cbc697ff5',
+    name: 'Чат 3',
+    avatar: null,
+    time: 1500000040000,
+    unreadMsgCount: 0,
+    lastMessage: 'ghjgjjjjjjj',
+  },
+  {
+    id: '740cf331-d83342-52530-b5a5-5b5cbc697ff5',
+    name: 'Чат 4',
+    avatar: null,
+    time: 1002000030000,
+    unreadMsgCount: 6,
+    lastMessage: 'jkljkluiuou ioiuuuuiuouio uijjjjjjjjjjjjjj oui99999999999999999999999999олдолдолдолдол99',
+  },
+];
+
+// mock selector
+export const getFullMessengerInfo = (chatsIds: string[], contactsIds: string[]) => {
+  return {
+    chats: MOCKUP_CHATS_FULL_INFO.filter((chat) => chatsIds.includes(chat.id)),
+    contacts: MOCKUP_CONTACTS_FULL_INFO.filter((contact) => contactsIds.includes(contact.id)),
+  };
+};
+
+export type ContactsMessengerState = typeof MOCKUP_CONTACTS_FULL_INFO extends Array<infer I> ? I : never;
+export type ChatsMessengerState = typeof MOCKUP_CHATS_FULL_INFO extends Array<infer I> ? I : never;
+export type CommonMessengerState = ChatsMessengerState | ContactsMessengerState;

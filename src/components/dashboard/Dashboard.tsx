@@ -1,6 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import Header from '../header/Header';
 import Section from './section/Section';
@@ -19,12 +19,10 @@ const Dashboard = () => {
 
   return (
     <div
-      className={
-        classNames({
-          'wrapper': true,
-          'wrapper__light-background': isDataEmpty,
-        })
-      }
+      className={classNames({
+        wrapper: true,
+        'wrapper__light-background': isDataEmpty,
+      })}
     >
       <Header
         title="Личный дашборд"
@@ -40,6 +38,9 @@ const Dashboard = () => {
         <EmptyDashboard />
       ) : (
         <>
+          <Link className="empty-dashboard__link" style={{ width: 300, margin: '0 auto' }} to={`/${ROUTES_PATH.messenger}`}>
+            Временная кнопка перехода к чатам
+          </Link>
           {!isServicesEmpty && <Section name={SECTION_NAME.services} type={SECTION_TYPE.services} items={getServicesArray(services)} />}
           {!isChatsEmpty && <Section name={SECTION_NAME.chats} type={SECTION_TYPE.chats} items={getChatsArray(chats)} />}
           {!isContactsEmpty && <Section name={SECTION_NAME.contacts} type={SECTION_TYPE.contacts} items={getContactsArray(contacts)} />}

@@ -4,7 +4,7 @@
   "printWidth": 150,
   "eslintIntegration": true,
   "bracketSpacing": true,
-  "semi": false,
+  "semi": true,
   "arrowParens": "always",
   "cssEnable": ["css", "less", "scss"],
   "javascriptEnable": ["javascript", "javascriptreact"],

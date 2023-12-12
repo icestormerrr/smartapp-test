@@ -1,0 +1,19 @@
+@import '../../../constants/constants';
+
+.chat {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+
+  &--placeholder {
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;
+
+    color: $dark-gray-color;
+    gap: 24px;
+  }
+}

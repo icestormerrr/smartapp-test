@@ -10,6 +10,7 @@ import 'reactjs-popup/dist/index.css';
 import Dashboard from './dashboard/Dashboard';
 import AddToDashboard from './add-to-dashboard/AddToDashboard';
 import Settings from './settings/Settings';
+import Messenger from "./messenger/Messenger";
 
 import { initApp } from '../redux/actions/dashboard';
 import { ROUTES_PATH } from '../constants/constants';
@@ -42,6 +43,7 @@ const App = ({ history }: { history: History }) => {
     <Router navigator={history} location={historyState.location} navigationType={historyState.action}>
       <Routes>
         <Route path={ROUTES_PATH.dashboard} element={<Dashboard />} />
+        <Route path={`/${ROUTES_PATH.messenger}`} element={<Messenger />}/>
         <Route path={`/${ROUTES_PATH.add}`} element={<AddToDashboard />} />
         <Route path={`/${ROUTES_PATH.settings}`} element={<Settings />} />
       </Routes>
